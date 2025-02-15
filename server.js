@@ -9,7 +9,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:3000", // React app URL
+    origin: "https://chatapp-ui-seven.vercel.app/", // React app URL
     methods: ["GET", "POST"],
   },
 });
@@ -26,4 +26,5 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(5000, () => console.log("Server running on port 5000"));
+// server.listen(5000, () => console.log("Server running on port 5000"));
+module.exports = app;
